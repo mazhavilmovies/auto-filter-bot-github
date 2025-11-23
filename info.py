@@ -37,9 +37,9 @@ class evamaria(Client):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID','6764849'))
-API_HASH = environ.get('API_HASH','682f2b9a44e0aab50c6e559963e19ff0')
-BOT_TOKEN = environ.get('BOT_TOKEN','5129458519:AAH3ESbrc1jFHfXHAye5A1Q4BjXP2tP-q7k')
+API_ID = int(environ.get('API_ID','21419016'))
+API_HASH = environ.get('API_HASH','79198e1eb4cfd0f771a89d83b9144e7e')
+BOT_TOKEN = environ.get('BOT_TOKEN','8584023542:AAERJAAWB7KhuG-sbEzPQ_SzNZLUxtfg47s')
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -47,13 +47,13 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS' ,'https://telegra.ph/file/42b5159a244f772659c1a.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS','1600439879 1480947731 1191792947').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002206795974').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS','1933114137').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002580746176').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
 auth_grp = environ.get('AUTH_GROUP')
-AUTH_CHANNEL = -1001714417381
+AUTH_CHANNEL = -1002535364932
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 USE_AS_BOT = environ.get("USE_AS_BOT", True)
 
@@ -70,7 +70,7 @@ TG_MAX_SELECT_LEN = environ.get("TG_MAX_SELECT_LEN", "100")
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://thfdo:thfdo@cluster0.vxn6u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://combtmpxrcws_db_user:aSyDkcTBD6pNF6fT@cluster0.4kosmi0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "cinehub-searching-bot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'telegram_files')
 
@@ -78,8 +78,8 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'telegram_files')
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002206795974'))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'CINEHUB_FAMILY')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003304589576'))
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Mazhavil_bots')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
@@ -103,3 +103,4 @@ LOG_STR += ("Long IMDB storyline enabled." if LONG_IMDB_DESCRIPTION else "LONG_I
 LOG_STR += ("Spell Check Mode Is Enabled, bot will be suggesting related movies if movie not found\n" if SPELL_CHECK_REPLY else "SPELL_CHECK_REPLY Mode disabled\n")
 LOG_STR += (f"MAX_LIST_ELM Found, long list will be shortened to first {MAX_LIST_ELM} elements\n" if MAX_LIST_ELM else "Full List of casts and crew will be shown in imdb template, restrict them by adding a value to MAX_LIST_ELM\n")
 LOG_STR += f"Your Currect IMDB template is {IMDB_TEMPLATE}"
+
